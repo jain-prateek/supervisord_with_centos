@@ -37,5 +37,25 @@ def test():
 if __name__ == "__main__":
     test()
     
+For pushing all logging from script to supervisord logs use:
+import time
+import sys
+import logging
+
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+
+def test():
+    while True:
+        logging.info("test222")
+        logging.error("test4444")
+        print("hello testing")
+        print("")
+        time.sleep(30)
+
+if __name__ == "__main__":
+    test()
     
+ORR
+use print statement like this : print("hello world", flush=True)
+
 Thats it for today!!!!!!
